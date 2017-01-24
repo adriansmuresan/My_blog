@@ -1,6 +1,11 @@
 module ApplicationHelper
+  class HTMLwithPygments < Redcarpet::Render::HTML
+    def block_code(code, language)
+      Pygments.highlight(code, lexer: language)
+    end
+  end
   def markdown(content)
-    renderer = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
+    renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
     options = {
       autolink: true, # detects links and automatically detects a tags, parse links even when they are not enclosed in <> characters
       no_intra_emphasis: true, #do not parse emphasis inside of words
