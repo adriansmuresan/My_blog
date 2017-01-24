@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog2</title>
+    <title>Adrian Muresan - Ecologist, Web Developer Lover of the Outdoors and Nature!</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +12,17 @@
   </head>
 
   <body>
+    <header id="main_navigation" class="clearfix">
+      <a href="#" class="name">Adrian Muresan</a>
+      <nav>
+        <%= link_to "Articles", posts_path %>
+        
+        <a href="#">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
     <%= yield %>
+
   </body>
 </html>
