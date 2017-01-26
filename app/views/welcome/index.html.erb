@@ -6,7 +6,7 @@
     <p> Attending an intensive code school left me hungry for more and I am eager to work on meaningful, useful and sustainable projects.</p>
     <p> I want to bring my excitement, passion for learning  and work ethic to a dynamic and collaborative team that believes in continuous improvement and works on projects that have a positive impact on our society.</p>
   </div>
-  
+
   <div class="col-2 homepage_content">
     <h2>Stuff I've written</h2>
     <hr>
@@ -19,11 +19,9 @@
   <div class="col-3 homepage_content">
     <h2>Stuff I've built</h2>
     <hr>
-    <h3><a href="#">Disko-flashers</a></h3>
-    <p class="date">Tuesday January 18th</p>
-    <h3><a href="#">Plaque-overflow</a></h3>
-    <p class="date">Tuesday January 18th</p>
-    <h3><a href="#">BASK-overflow</a></h3>
-    <p class="date">Tuesday January 18th</p>
+    <% @projects.each do |project| %>
+    <h3><a href="#"><%= link_to project.title, project %></a></h3>
+    <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
   </div>
 </div>
