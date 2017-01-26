@@ -10,9 +10,11 @@
   <% end %>
  </div>
 
- <div class="pagination">
+ <!-- <div class="pagination">
    <span class="previous_page disabeled">Previous</span>
    <em class="current">1</em>
    <a rel="next" href="#">2</a>
    <a href="#" class="next_page">Next</a>
- </div>
+ </div> -->
+
+<%= will_paginate @posts %>
