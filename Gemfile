@@ -33,6 +33,7 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'pygments.rb', '~> 1.1', '>= 1.1.1'
 gem 'friendly_id', '~> 5.1'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
+gem 'mail_form', '~> 1.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
